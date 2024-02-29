@@ -1,0 +1,12 @@
+SELECT Surname, [Student number],[Q1 mark]
+FROM student_marks
+WHERE [student number] = 20000002;
+
+INSERT INTO student_marks (surname, [first name],[Student number], [Q1 mark], [Q2 mark],[Q3 mark])
+VALUES ('Fisher', 'Jeremy',20000004,11,12,5);
+
+ALTER TABLE student_marks
+ADD COLUMN [Overall mark] INTEGER;
+
+UPDATE student_marks
+SET [Overall mark] = [Q1 mark] + 2*[Q2 mark] + [Q3 mark];
